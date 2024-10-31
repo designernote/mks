@@ -1,0 +1,318 @@
+@charset "UTF-8";
+@import url("common.css");
+/* 기본 1920 기준 pc */
+/* PC */
+@media screen and (max-width: 1920px) {
+  /* 1920 기준 vw (1441 ~ 1920) */
+}
+/* 태블릿 */
+@media screen and (max-width: 1440px) {
+  /* 1024 기준 px (721 ~ 1440) */
+  :root {
+    font-size: 12px;
+  }
+  header {
+    padding: 0 1rem;
+    width: auto !important;
+  }
+  header + main {
+    flex: 1 1 auto;
+    padding: 0 1rem;
+  }
+  footer {
+    flex: 0 0 auto;
+    padding: 0 1rem;
+  }
+  .wrap main .container .branch .contents .prd {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+  }
+  .wrap main .container .branch .contents .prd::-webkit-scrollbar {
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+  }
+  .wrap main .container .branch .contents .prd::-webkit-scrollbar-track {
+    background-color: #efefef;
+    border-radius: 12px;
+  }
+  .wrap main .container .branch .contents .prd::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+  }
+  .wrap main .container .branch .contents .prd ul {
+    flex-flow: nowrap !important;
+    gap: 1rem;
+  }
+  .wrap main .container .branch .contents .prd ul li > a {
+    width: 8.125rem;
+    height: 8.125rem;
+  }
+  .wrap footer .contents {
+    flex-direction: column;
+  }
+  .wrap footer .contents .btn_area {
+    justify-content: center;
+  }
+  .wrap footer .contents .time {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .wrap footer .contents > .menu ul li {
+    text-align: center;
+  }
+}
+/* 모바일 */
+@media screen and (max-width: 720px) {
+  /* 360 기준 px (~ 720) */
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  flex: 0 0 100px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 6.25rem;
+  background-color: #fff;
+}
+header .logo > a {
+  font-size: 0;
+  color: transparent;
+  width: 7.0625rem;
+  height: 2rem;
+  background: url("../images/logo.svg") no-repeat center/contain;
+  display: block;
+}
+header .top_menu {
+  display: flex;
+  align-items: center;
+  gap: 2.8125rem;
+}
+header .top_menu > a {
+  font-size: 1.5rem;
+  height: 3.4375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .top_menu .btn_develop {
+  padding: 0 1.0625rem;
+  background: var(--primary-c-y);
+  border-radius: 0.625rem;
+}
+.wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+}
+.wrap main {
+  margin-top: 6.875rem;
+}
+.wrap main .container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.wrap main .container .visual_banner {
+  height: 16.125rem;
+  border-radius: 0.625rem;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap main .container .branch > .menu {
+  margin-top: 3.625rem;
+}
+.wrap main .container .branch > .menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap main .container .branch > .menu ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.wrap main .container .branch > .menu ul li a {
+  width: 8.3125rem;
+  height: 3.6875rem;
+  display: block;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "GoryeongStrawberry";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap main .container .branch > .menu ul li a.active {
+  background: var(--primary-c-y);
+  color: #fff;
+}
+.wrap main .container .branch > .menu ul li:nth-child(1) {
+  border-radius: 10px 0px 0px 10px;
+  border: 1px solid rgba(204, 204, 204, 0.8);
+}
+.wrap main .container .branch > .menu ul li:nth-child(2) {
+  border-radius: 0px 10px 10px 0px;
+  border: 1px solid rgba(204, 204, 204, 0.8);
+}
+.wrap main .container .branch .contents > .menu {
+  margin-top: 2.6875rem;
+}
+.wrap main .container .branch .contents > .menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9375rem;
+}
+.wrap main .container .branch .contents > .menu ul li a {
+  font-size: 1.25rem;
+  font-weight: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  height: 2.8125rem;
+  padding: 0 1.875rem;
+  border: 1px solid #ccc;
+}
+.wrap main .container .branch .contents > .menu ul li a.active {
+  color: #fff;
+  background-color: var(--primary-c-y);
+}
+.wrap main .container .branch .contents .prd {
+  margin-top: 1.875rem;
+}
+.wrap main .container .branch .contents .prd ul {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrap main .container .branch .contents .prd ul li {
+  margin-top: 3.125rem;
+}
+.wrap main .container .branch .contents .prd ul li > a {
+  position: relative;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  display: block;
+  width: 18.75rem;
+  height: 18.75rem;
+}
+.wrap main .container .branch .contents .prd ul li > a > img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+}
+.wrap main .container .branch .contents .prd ul li > a .texts {
+  position: absolute;
+  bottom: 0.625rem;
+  left: 0;
+  right: 0;
+  padding: 0 1.375rem;
+  font-size: 1.25rem;
+}
+.wrap main .container .branch .contents .prd ul li > a .texts > div {
+  width: 100%;
+  height: 3.5625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--primary-c-y);
+}
+.wrap main .container .branch .contents .prd ul li .items {
+  font-size: 0.9375rem;
+  margin-top: 0.875rem;
+}
+.wrap main .container .branch .contents .prd ul li .items .grade {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.wrap main .container .branch .contents .prd ul li .items .grade > i {
+  width: 1.375rem;
+  height: 1.375rem;
+  display: block;
+  margin-right: 0.5rem;
+  background: url("../images/icon_crown.svg") no-repeat center/contain;
+}
+.wrap main .container .branch .contents .prd ul li .items .price {
+  margin-top: 0.5rem;
+}
+.wrap footer {
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  background: #fff;
+}
+.wrap footer .contents {
+  padding-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  max-width: 1280px;
+  margin: 40px 0 0;
+  flex: 1 1 auto;
+  gap: 2.5rem;
+}
+.wrap footer .contents .cs_center {
+  flex: 0 0 auto;
+}
+.wrap footer .contents .cs_center .btn_area {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.wrap footer .contents .cs_center .btn_area > a {
+  width: 9.125rem;
+  height: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.625rem;
+}
+.wrap footer .contents .cs_center .time {
+  color: #333;
+  font-size: 0.875rem;
+  margin-top: 1.25rem;
+}
+.wrap footer .contents > .menu {
+  flex: auto;
+}
+.wrap footer .contents > .menu ul {
+  display: flex;
+  align-items: flex-start;
+}
+.wrap footer .contents > .menu ul li {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.wrap footer .contents > .menu ul li > strong {
+  margin-bottom: 15px;
+  font-size: 0.875rem;
+}
+.wrap footer .contents > .menu ul li > strong > a {
+  font-size: inherit;
+}
+.wrap footer .contents > .menu ul li a {
+  font-size: 0.75rem;
+}/*# sourceMappingURL=style.css.map */
