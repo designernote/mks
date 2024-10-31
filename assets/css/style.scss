@@ -211,16 +211,18 @@ header {
               gap: 0.9375rem;
 
               li {
+                border-radius: 999px;
+
+                border: 1px solid #ccc;
+                overflow: hidden;
                 a {
                   font-size: 1.25rem;
                   font-weight: 200;
                   display: flex;
                   justify-content: center;
                   align-items: center;
-                  border-radius: 999px;
                   height: 2.8125rem;
                   padding: 0 1.875rem;
-                  border: 1px solid #ccc;
 
                   &.active {
                     color: #fff;

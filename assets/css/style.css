@@ -182,16 +182,19 @@ header .top_menu .btn_develop {
   justify-content: center;
   gap: 0.9375rem;
 }
+.wrap main .container .branch .contents > .menu ul li {
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
 .wrap main .container .branch .contents > .menu ul li a {
   font-size: 1.25rem;
   font-weight: 200;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 999px;
   height: 2.8125rem;
   padding: 0 1.875rem;
-  border: 1px solid #ccc;
 }
 .wrap main .container .branch .contents > .menu ul li a.active {
   color: #fff;
