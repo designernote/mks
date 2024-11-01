@@ -67,10 +67,73 @@
   .wrap main .container .branch .contents > .menu ul li a {
     padding: 0 0.625rem !important;
   }
+  .sub_wrap {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .wrap main .container .sub_wrap aside .content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap main .container .sub_wrap aside .content .thumbnail {
+    width: 23.75rem !important;
+    height: 23.75rem !important;
+  }
+  .wrap main .container .sub_wrap aside .content .btn_subs {
+    width: 100% !important;
+  }
+  .wrap main .container .sub_wrap aside .content small {
+    max-width: 100% !important;
+    text-align: center;
+  }
+  .wrap main .container .sub_wrap .service_wrap .contents h3 {
+    margin-bottom: 0 !important;
+  }
+  .wrap main .container .sub_wrap .service_wrap .contents {
+    margin-top: 2.5rem !important;
+  }
 }
 /* 모바일 */
 @media screen and (max-width: 720px) {
   /* 360 기준 px (~ 720) */
+}
+.ripple {
+  overflow: hidden;
+  position: relative;
+}
+.ripple:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #fff;
+  visibility: hidden;
+  z-index: 2;
+}
+.ripple:not(:active):before {
+  animation: ripple 0.4s cubic-bezier(0, 0, 0.2, 1);
+  transition: visibility 0.7s step-end;
+}
+.ripple:active:before {
+  visibility: visible;
+}
+
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+  }
 }
 header {
   position: fixed;
@@ -119,6 +182,7 @@ header .top_menu .btn_develop {
   padding: 0 1.0625rem;
   background: var(--primary-c-y);
   border-radius: 0.625rem;
+  position: relative;
 }
 .wrap {
   position: relative;
@@ -289,13 +353,14 @@ header .top_menu .btn_develop {
 .wrap main .container .sub_wrap .service_wrap {
   background: #f1f1f1;
   border-radius: 0.625rem;
-  padding: 1.5rem 1rem;
+  padding: 3rem 1.5rem;
   margin-top: 3rem;
   flex: 1 1 auto;
 }
 .wrap main .container .sub_wrap .service_wrap h2 {
-  font-size: 2.875rem;
+  font-size: 2.5rem;
   font-weight: bold;
+  font-family: "s-core-dream-bold";
 }
 .wrap main .container .sub_wrap .service_wrap .contents {
   margin-top: 1.25rem;
